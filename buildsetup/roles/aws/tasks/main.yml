@@ -3,8 +3,12 @@
     with_items:
      - python3-pip
      - python-dev
+    tags:
+      - s3
   - name: Install python-boto library
     pip: name=boto3
+    tags:
+      - s3
   - name: Create AWS Instances
     ec2:                         # Change the key, image, region as per your account #
      key_name: "master"
