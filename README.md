@@ -1,3 +1,4 @@
+# README
 # ansible example for Buildsetup
 1. Setup Build Machine by installing JDK 1.8, Maven
   $ ansible-playbook buildsetup.yml 
