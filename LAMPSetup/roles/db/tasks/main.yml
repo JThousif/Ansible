@@ -19,5 +19,6 @@
 
 - name: Start mariadb Service
   service: name=mariadb state=started enabled=yes
+  ignore_errors: yes
 
 
