@@ -1,9 +1,10 @@
   - name: Apt Update
     apt: update_cache=yes
-  - name : Install JDK 1.8
-    apt: name=openjdk-8-jdk state=present
-  - name: Install Git
-    apt: name=git state=present
+  - name : Install JDK & Git
+    apt: name={{item}} state=present
+    with_items:
+    - openjdk-8-jdk
+    - git
   - name: Check & create downloads dir
     file:
       path: '{{ maven_home_parent_directory }}'
